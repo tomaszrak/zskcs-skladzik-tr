@@ -1,0 +1,31 @@
+ <?php
+ $title = 'Wszyscy użytkownicy';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+
+ <table class="table">
+ <tr>
+     
+     <th>Użytkownik</th>
+     <th>EMail</th>
+     <th>Aktywny?</th>
+     <th>Akcja</th>
+          
+ </tr>
+ <?php foreach ($uzytkownicys as $uzytkownicy) : ?>
+ <tr>
+     
+     <td><?php echo $this->escapeHtml($uzytkownicy->username);?></td>
+     <td><?php echo $this->escapeHtml($uzytkownicy->email);?></td>
+     <td><?php echo $this->escapeHtml($uzytkownicy->state);?></td>
+     <td><a href="<?php echo $this->url('uzytkownicy',
+             array('action'=>'edit', 'user_id' => $uzytkownicy->user_id));?>">Edytuj</a></td>
+     
+     
+ </tr>
+ <?php endforeach; ?>
+ </table>
+ 

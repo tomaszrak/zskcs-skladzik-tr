@@ -1,0 +1,46 @@
+ <?php
+ $title = 'Wszystkie zamówienia';
+ $titler = 'Oczekujące zamówienia';
+ $titlea = 'Zaakceptowane zamówienia';
+ $titlev = 'Archiwalne zamówienia';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+ <table>
+ <tr>
+     <td><a class="btn btn-success btn-lg" href="/zamowienia/indexr" target="_self"><?php echo $this->translate($titler) ?> &raquo;</a></td>
+     <td><a class="btn btn-success btn-lg disabled" href="/zamowienia/indexa" target="_self"><?php echo $this->translate($titlea) ?> &raquo;</a></td>
+     <td><a class="btn btn-success btn-lg" href="/zamowienia/indexv" target="_self"><?php echo $this->translate($titlev) ?> &raquo;</a></td>
+ </tr>
+ </table>
+ <table class="table">
+ <tr>
+     
+     <th>Użytkownik</th>
+     <th>Przedmiot</th>
+     <th>Data złożenia zamówienia</th>
+     <th>Status</th>
+     <th>Informacje</th>
+     <th>Akcja</th>          
+ </tr>
+ <?php foreach ($zamowienias as $zamowienia) : ?>
+ <tr>    
+     <td><?php echo $this->escapeHtml($zamowienia->id_uzytkownika);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->id_przedmiotu);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->data);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->status);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->informacje);?></td>
+     <td>
+         <a href="<?php echo $this->url('zamowienia',
+             array('action'=>'edit', 'id_zamowienia' => $zamowienia->id_zamowienia));?>">Edytuj</a>
+         
+     
+     </td>
+     
+     
+ </tr>
+ <?php endforeach; ?>
+ </table>
+ 

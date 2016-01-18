@@ -1,0 +1,45 @@
+<div class="jumbotron">
+    <h1><?php echo sprintf($this->translate('Witamy w składziku %sZamojskiego Stowarzyszenia Kulturalnego \'Czerwony Smok\'%s'), '<span class="color_red">', '</span>') ?></h1>
+    <p><?php echo sprintf($this->translate('Jeśli chcesz przeszukać składzik w poszukiwaniu danej %sgry%s, %sksiążki%s lub %sinnego przedmiotu%s, kliknij poniższy przycisk.'), '<a href="http://localhost:8000/skladzik/games">', '</a>', '<a href="http://localhost:8000/skladzik/books">', '</a>', '<a href="http://localhost:8000/skladzik/stuff">', '</a>') ?></p>
+    <p><a class="btn btn-success btn-lg center-block" href="http://localhost:8000/skladzik" target="_self"><?php echo $this->translate('Zacznij przeszukiwanie') ?> &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Rejestracja') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><?php echo sprintf($this->translate('Zarejestruj się, aby korzystać ze wszystkich możliwości składzika.'), '<a href="https://github.com/zendframework/modules.zendframework.com">', '</a>') ?></p>
+                <p><a class="btn btn-success center-block" href="http://localhost:8000/user/register" target="_self"><?php echo $this->translate('Rejestracja') ?> &raquo;</a></p>
+                <p><a class="btn btn-success center-block" href="http://localhost:8000/user/login" target="_self"><?php echo $this->translate('Logowanie') ?> &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('O nas') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><?php echo sprintf($this->translate('Jeśli chcesz nas poznać, kliknij w poniższy przycisk.')) ?></p>
+                <p><a class="btn btn-success center-block" href="http://zskcs.pl" target="_blank"><?php echo $this->translate('Strona') ?> &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+        <div class="panel panel-default ">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Pogadaj z nami') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><?php echo sprintf($this->translate('Jeśli chcesz pogadać z nami i się spotkać, wejdź i napisz na naszym forum.'), '<a href="irc://irc.freenode.net/zftalk">', '</a>', '<a href="http://framework.zend.com/wiki/display/ZFDEV/Mailing+Lists">', '</a>') ?></p>
+                <p><a class="btn btn-success center-block" href="http://forum.zskcs.pl/" target="_blank"><?php echo $this->translate('Forum') ?> &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>

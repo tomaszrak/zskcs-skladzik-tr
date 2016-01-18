@@ -1,0 +1,26 @@
+ <?php
+ $title = 'Twoje zamówienia';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <table class="table">
+ <tr>    
+     <th>Przedmiot</th>
+     <th>Data złożenia zamówienia</th>
+     <th>Status</th>
+     <th>Informacje</th>          
+ </tr>
+ <?php foreach ($zamowienias as $zamowienia) : ?>
+ <tr>     
+     <td><?php echo $this->escapeHtml($zamowienia->id_przedmiotu);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->data);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->status);?></td>
+     <td><?php echo $this->escapeHtml($zamowienia->informacje);?></td>
+     
+     
+     
+ </tr>
+ <?php endforeach; ?>
+ 
+ </table>
+ 

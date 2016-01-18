@@ -1,0 +1,44 @@
+<?php
+
+ $title = 'Edytuj dane o przedmiocie';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+ <?php
+ $form = $this->form;
+ $form->setAttribute('action', $this->url('skladzik',array('action' => 'edit','id_przedmiotu'=> $this->id_przedmiotu,)));
+ $form->prepare(); ?>
+<table class="table">
+ <tr>
+     <th>Index</th>
+     <th>Wartość</th>     
+ </tr>
+ <?php
+ echo $this->form()->openTag($form); ?>
+ <p><?php echo $this->formHidden($form->get('id_przedmiotu')); ?></p>
+ <tr>
+     <td><p><?php echo 'Nazwa:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('nazwa')); ?></p></td>
+ </tr>
+ <tr>
+     <td><p><?php echo 'Typ:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('typ')); ?></p></td>
+ </tr>
+ <tr>
+     <td><p><?php echo 'Autor:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('autor')); ?></p></td>
+ </tr>
+ <tr>
+     <td><p><?php echo 'Kod:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('kod')); ?></p></td>
+ </tr>
+ <p><?php echo $this->formHidden($form->get('stan')); ?></p>
+ 
+ <tr>
+     <td><p><?php echo 'Uwagi:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('uwagi')); ?></p></td>
+ </tr>
+ </table>
+ <td><?php echo $this->formSubmit($form->get('submit')); ?></td>
+ <?php echo $this->form()->closeTag(); ?>

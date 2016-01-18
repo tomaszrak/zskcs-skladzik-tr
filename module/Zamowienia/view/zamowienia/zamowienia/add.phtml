@@ -1,0 +1,38 @@
+<?php
+ $title = 'Dodaj nowe zamówienie';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <?php
+ $form->setAttribute('action', $this->url('zamowienia', array('action' => 'add')));
+ $form->prepare();?>
+
+ <table class="table">
+ <tr>
+     <th>Index</th>
+     <th>Wartość</th>     
+ </tr>
+ <?php
+ echo $this->form()->openTag($form); ?>
+ <p><?php echo $this->formHidden($form->get('id_zamowienia')); ?></p>
+ <tr>
+     <td><p><?php echo 'Użytkownik:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('id_uzytkownika')); ?></p></td>
+ </tr>
+ <tr>
+     <td><p><?php echo 'Przedmiot:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('id_przedmiotu')); ?></p></td>
+ </tr>
+ <tr>
+     <td><p><?php echo 'Status:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('status')); ?></p></td>
+ </tr>
+ <tr>
+     <td><p><?php echo 'Informacje:'; ?></p></td>
+     <td><p><?php echo $this->formRow($form->get('informacje')); ?></p></td>
+ </tr>
+ <p><?php echo $this->formHidden($form->get('data')); ?></p>
+ 
+ </table>
+ <td><?php echo $this->formSubmit($form->get('submit')); ?></td>
+ <?php echo $this->form()->closeTag(); ?>

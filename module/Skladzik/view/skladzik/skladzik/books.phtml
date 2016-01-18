@@ -1,0 +1,39 @@
+ <?php
+ $title = 'Wszystkie przedmioty';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <table>
+ <tr>
+     <td><a class="btn btn-success btn-lg" href="/skladzik" target="_self"><?php echo $this->translate('Wszystko') ?> &raquo;</a></td>
+     <td><a class="btn btn-success btn-lg" href="/skladzik/games" target="_self"><?php echo $this->translate('Gry') ?> &raquo;</a></td>
+     <td><a class="btn btn-success btn-lg disabled" href="/skladzik/books" target="_self"><?php echo $this->translate('Książki') ?> &raquo;</a></td>
+     <td><a class="btn btn-success btn-lg" href="/skladzik/stuff" target="_self"><?php echo $this->translate('Inne') ?> &raquo;</a></td>
+     
+ </tr>
+ </table>
+
+ <table class="table">
+ <tr>
+     <th>Tytuł</th>
+     <th>Autor</th>
+     <th>Uwagi</th>
+     <th>Stan</th>
+     <th>Akcja</th>
+     
+ </tr>
+ <?php foreach ($skladziks as $skladzik) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($skladzik->nazwa);?></td>
+     <td><?php echo $this->escapeHtml($skladzik->autor);?></td>
+     <td><?php echo $this->escapeHtml($skladzik->uwagi);?></td>
+     <td><?php echo $this->escapeHtml($skladzik->stan);?></td>
+     <td><a href="<?php echo $this->url('skladzik',
+             array('action'=>'reserve', 'id_przedmiotu' => $skladzik->id_przedmiotu));?>">Rezerwuj</a>
+         <a href="<?php echo $this->url('skladzik',
+             array('action'=>'edit', 'id_przedmiotu' => $skladzik->id_przedmiotu));?>">Edytuj</a></td>
+     
+ </tr>
+ <?php endforeach; ?>
+ </table>
+ 

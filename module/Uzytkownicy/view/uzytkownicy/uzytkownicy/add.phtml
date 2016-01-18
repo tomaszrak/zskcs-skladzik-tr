@@ -1,0 +1,18 @@
+<?php
+ $title = 'Dodaj nowego użytkownika';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <?php
+ $form->setAttribute('action', $this->url('uzytkownicy', array('action' => 'add')));
+ $form->prepare();
+
+ echo $this->form()->openTag($form); ?>
+ 
+ <p><?php echo $this->formHidden($form->get('user_id'));?></p>
+ <p><?php echo $this->formRow($form->get('username'));?></p>
+ <p><?php echo $this->formRow($form->get('state'));?></p>
+ <p><?php echo $this->formRow($form->get('email'));?></p>
+ <p><?php echo $this->formSubmit($form->get('submit'));?></p>
+ <?php echo $this->form()->closeTag();
+ 

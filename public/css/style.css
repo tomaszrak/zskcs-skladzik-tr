@@ -1,0 +1,111 @@
+body 
+{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color:#000000;
+    color: #ebebeb;
+}
+a:link {
+    color: #d1d1e0;
+}
+a:visited {
+    color: white;
+}
+.panel
+{
+    background-color:#2e2e2e;
+    border-color:#8C1717;
+}
+.panel-default > .panel-heading
+{  
+    background-image: linear-gradient(to bottom, #8C1717 0px, #CC0000 100%);
+    border-color: #8C1717;
+}
+h3
+{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.jumbotron
+{
+    background-color:#2e2e2e;
+}
+.black
+{
+    color:#000000;
+}
+.panel-title
+{
+    background-color:transparent;
+    color:#EEE;
+}
+.color_red
+{
+color:#CC0000;
+}
+
+.btn-success 
+{
+  background-color: #CC0000;
+  background-image: -moz-linear-gradient(top, #8C1717, #000000);
+  background-image: -ms-linear-gradient(top, #8C1717, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8C1717), to(#000000));
+  background-image: -webkit-linear-gradient(top, #8C1717, #000000);
+  background-image: -o-linear-gradient(top, #8C1717, #000000);
+  background-image: linear-gradient(top, #8C1717, #000000);
+  border: solid #8C1717 0px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C1717', endColorstr='#000000', GradientType=0);
+}
+
+.btn-success:focused,
+.btn-success:focus,
+.btn-success:hover,
+.btn-success:pressed,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] 
+{
+  background-color: #0E0E0E;
+}
+.btn-success:pressed, .btn-success.pressed 
+{
+    border-color:#8C1717;
+    background-color: #000000;
+}
+.btn-success:focus, .btn-success.focus 
+{
+    border-color:#8C1717;
+    background-color: #000000;
+}
+.btn-success:focused, .btn-success.focused 
+{
+    border-color:#8C1717;
+    background-color: #000000;
+}
+.btn-success:active, .btn-success.active 
+{
+  background-image: -moz-linear-gradient(top, #8C1717, #000000);
+  background-image: -ms-linear-gradient(top, #8C1717, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8C1717), to(#000000));
+  background-image: -webkit-linear-gradient(top, #8C1717, #000000);
+  background-image: -o-linear-gradient(top, #8C1717, #000000);
+  background-image: linear-gradient(top, #8C1717, #000000);
+}
+.btn-success:hover, .btn-success.hover 
+{
+    border-color:#8C1717;
+    background-color: #000000;
+}
+
+div.container a.brand 
+{
+    background: url("../img/cslogo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+.table{
+    background-color: #280000;
+}
